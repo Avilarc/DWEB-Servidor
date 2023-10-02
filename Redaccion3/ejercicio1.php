@@ -22,6 +22,10 @@
 
     }
 
-
-    echo calculoSegundo(4,2,1);
+    try {
+        echo calculoSegundo(4,2,1);
+    } catch (Exception ) {
+        echo "La raiz del numero no puede ser negativo";
+    }
+    
 ?>
