@@ -8,9 +8,20 @@
     include "ejercicio1.php";
 
     function subirSueldo($porcentaje,$persona) {
-        $persona -> setSueldo($persona -> getSueldo() * ($porcentaje/100));
+        $nuevoSueldo = $persona -> getSueldo() * ($porcentaje/100);
+
+        if ($nuevoSueldo <= 0) {
+            throw new Exception("El sueldo no puede ser 0 o negativo, cuando se le está aumentando");
+        } else {
+            $persona -> setSueldo($nuevoSueldo);
+        }
     }
 
     $persona1 = new Persona("Maria Hernan",28558877,78,1000);
-    subirSueldo(20,$persona1);
+    try {
+        subirSueldo(20,$persona1);
+    } catch (Exception $e) {
+        echo $e;
+    }
+    
 ?>
