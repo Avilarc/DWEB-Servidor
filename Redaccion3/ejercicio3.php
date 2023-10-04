@@ -16,6 +16,6 @@
     }
 
 
-    echo "Los divisores de 10 son:" . $divisores(10);
+    echo "Los divisores de 10 son:" . divisores(10);
 
 ?>

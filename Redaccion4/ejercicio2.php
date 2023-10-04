@@ -5,13 +5,12 @@
 
     include "ejercicio1.php";
 
-    class Futbolista extends Persona () {
+    class Futbolista extends Persona  {
         private $equipo;
         private $posicion;
 
         function __construct($nombre,$edad,$sueldo,$equipo,$posicion) {
             $this -> nombre = $nombre;
-            $this -> DNI = $DNI;
             $this -> edad = $edad;
             $this -> sueldo = $sueldo;
             $this -> equipo = $equipo;

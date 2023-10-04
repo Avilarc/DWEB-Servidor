@@ -51,7 +51,7 @@
             13 => "J", 14 => "Z", 15 => "S", 16 => "Q", 17 => "V", 18 => "H", 19 => "L",
             20 => "C", 21 => "K", 22 => "E", 23 => "T");
 
-            return $listaLetras[$this -> dni%23];
+            return $listaLetras[$this -> DNI%23];
         }
 
     }

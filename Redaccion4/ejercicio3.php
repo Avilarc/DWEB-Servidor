@@ -14,7 +14,7 @@
         }
      }
 
-     $persona1 = new Persona("Jose  Lito",72256877,25,1500);
+     $persona1 = new Persona("Jose  Lito",72256877,17,1500);
      $persona2 = new Persona("Paco Poco",70050875,18,2000);
 
      echo quienMayor($persona1, $persona2);

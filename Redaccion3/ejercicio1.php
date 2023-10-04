@@ -16,7 +16,7 @@
         $result2 = round(($menosb - $oper4) / $oper3);
 
         $resultadoFinal = array($result1,$result2);
-
+       
         return $resultadoFinal;
 
 
@@ -24,8 +24,8 @@
 
     try {
         echo calculoSegundo(4,2,1);
-    } catch (Exception ) {
-        echo "La raiz del numero no puede ser negativo";
+    } catch (Exception $e) {
+        echo "$e";
     }
     
 ?>
