@@ -27,4 +27,8 @@
     }
 
     $futbolisto = new Futbolista("Alberto",25,rand(20000,100000),"Granada CF","Delantero");
+
+    echo "Ejercicio 2: --------------------------- <br>";
+    echo "El futbolista " . $futbolisto -> getNombre() . " juega en el " . $futbolisto -> getEquipo() . " en la posición de " . $futbolisto -> getPosicion() . "<br>";
+    echo "Cobra un total de: " . $futbolisto -> getSueldo() . "<br>";
 ?>

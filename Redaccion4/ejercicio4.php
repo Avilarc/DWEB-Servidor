@@ -8,18 +8,22 @@
     include "ejercicio1.php";
 
     function subirSueldo($porcentaje,$persona) {
-        $nuevoSueldo = $persona -> getSueldo() * ($porcentaje/100);
+        $nuevoSueldo = $persona -> getSueldo() + ($persona -> getSueldo() * ($porcentaje/100));
 
-        if ($nuevoSueldo <= 0) {
-            throw new Exception("El sueldo no puede ser 0 o negativo, cuando se le está aumentando");
+        if ($nuevoSueldo <= $persona -> getSueldo()) {
+            throw new Exception("El sueldo no puede ser 0 o negativo, cuando se le está aumentando <br>");
         } else {
             $persona -> setSueldo($nuevoSueldo);
         }
     }
 
     $persona1 = new Persona("Maria Hernan",28558877,78,1000);
+    echo "Ejercicio 4 : ------------------------------ <br>";
+    echo "El sueldo antes de subirle el sueldo es: " . $persona1 -> getSueldo() . "<br>";
     try {
         subirSueldo(20,$persona1);
+        echo "El sueldo despues de aplicarle la subida es: " . $persona1 -> getSueldo() . "<br>";
+        
     } catch (Exception $e) {
         echo $e;
     }

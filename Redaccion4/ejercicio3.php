@@ -4,18 +4,19 @@
      * devuelva cual es mayor y lo muestre por pantalla 
      */
 
-     include "ejercicio1.php";
+    include "ejercicio1.php";
 
-     function quienMayor($persona1, $persona2) {
+    function quienMayor($persona1, $persona2) {
         if ($persona1 -> getEdad() > $persona2 -> getEdad()) {
             return $persona1 -> getNombre() . " es mayor que " . $persona2 -> getNombre();
         } else {
             return $persona2 -> getNombre() . " es mayor que " . $persona1 -> getNombre();
         }
-     }
+    }
 
-     $persona1 = new Persona("Jose  Lito",72256877,17,1500);
-     $persona2 = new Persona("Paco Poco",70050875,18,2000);
+    $persona1 = new Persona("Jose  Lito",72256877,20,1500);
+    $persona2 = new Persona("Paco Poco",70050875,18,2000);
 
-     echo quienMayor($persona1, $persona2);
+    echo "Ejercicio 3: --------------------------- <br>";
+    echo quienMayor($persona1, $persona2) . "<br>";
 ?>

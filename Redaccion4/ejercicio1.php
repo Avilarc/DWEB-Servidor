@@ -37,6 +37,10 @@
             return $this -> sueldo;
         }
 
+        public function getDNI() {
+            return $this -> DNI;
+        }
+
         public function setSueldo($sueldo) {
             $this -> sueldo = $sueldo;
         }
@@ -58,5 +62,11 @@
 
 
     $gentuzo = new Persona("Pepe Perez",77558877,56,1500);
-    echo $gentuzo -> calculaLetra();
+    echo "Ejercicio 1: --------------------------------------- <br>";
+    echo "Su nombre es: " . $gentuzo -> getNombre() . "<br>";
+    echo "Su DNI es:" . $gentuzo -> getDNI() . "<br>";
+    echo "La letra del DNI es : " . $gentuzo -> calculaLetra() . "<br>";
+    echo "Su sueldo es :" . $gentuzo -> getSueldo() . "<br>";
+    echo "Su edad es: " . $gentuzo -> getEdad() . "<br>";
+    
 ?>
